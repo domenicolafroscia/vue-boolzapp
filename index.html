@@ -58,115 +58,17 @@
                     <main>
                         <div class="container">
                             <ul class="chat">
-                                <li>
+                                <li v-for="(contact, index) in contacts" :class="(index == indexContact) ? 'chat li' : 'chat'" @click="setActiveContact(index)">
                                     <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_1.jpg" alt="Avatar chat-1">
+                                        <img class="img-avatar" :src="contact.avatar" alt="Avatar chat-1">
                                         <span>
-                                            <p class="name-chat">Michele</p>
+                                            <p class="name-chat">{{ contact.name }}</p>
                                             <p class="color-gray">Lorem ipsum solor sit amet</p>
                                         </span>
                                     </div>
     
                                     <div class="avatar-2">
                                         <p class="color-gray hour">16:15</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_2.jpg" alt="Avatar chat-2">
-                                        <span>
-                                            <p class="name-chat">Fabio</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">16:05</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_3.jpg" alt="Avatar chat-3">
-                                        <span>
-                                            <p class="name-chat">Samuele</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">16:03</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_4.jpg" alt="Avatar chat-4">
-                                        <span>
-                                            <p class="name-chat">Alessandro B.</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">15:50</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_5.jpg" alt="Avatar chat-5">
-                                        <span>
-                                            <p class="name-chat">Alessandro L.</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">15:45</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_6.jpg" alt="Avatar chat-6">
-                                        <span>
-                                            <p class="name-chat">Claudia</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">15:40</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_7.jpg" alt="Avatar chat-7">
-                                        <span>
-                                            <p class="name-chat">Federico</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">15:22</p>
-                                    </div>
-                                </li>
-    
-                                <li>
-                                    <div class="avatar-1">
-                                        <img class="img-avatar" src="img/avatar_8.jpg" alt="Avatar chat-8">
-                                        <span>
-                                            <p class="name-chat">Davide</p>
-                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
-                                        </span>
-                                    </div>
-    
-                                    <div class="avatar-2">
-                                        <p class="color-gray hour">15:15</p>
                                     </div>
                                 </li>
                             </ul>
@@ -181,10 +83,10 @@
                         <div class="container-1">
                             <div class="avatar-1">
                                 <button class="btn">
-                                    <img class="img-avatar" src="img/avatar_1.jpg" alt="Avatar chat-1">
+                                    <img class="img-avatar" :src="contacts[indexContact].avatar" alt="Avatar chat-1">
                                 </button>
                                 <span>
-                                    <button class="btn name-chat">Michele</button>
+                                    <button class="btn name-chat">{{ contacts[indexContact].name }}</button>
                                     <p class="color-grey">Ultimo accesso oggi alle 16:26</p>
                                 </span>
                             </div>
@@ -201,12 +103,9 @@
                     <!-- Main -->
                     <main>
                         <div class="main">
-                            <div class="messages">
-                                <div class="row-1 msg">
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla sapiente hic,
-                                        possimus magnam doloremque quibusdam dolor numquam vitae odio nobis provident, quod
-                                        velit libero dicta, iusto consequuntur a obcaecati?
-                                    </p>
+                            <div class="messages" v-for="(msg, msgIndex) in contacts[indexContact].messages">
+                                <div class="msg" :class="msg.status ===  'sent' ? 'row-1' : 'row-2'">
+                                    <p>{{ msg.message }}</p>
                                     <div class="info-message">
                                         <i class="chevron-down fa-solid fa-chevron-down"></i>
                                         <div class="chevron-down-hover">
@@ -215,20 +114,6 @@
                                         </div>
                                     </div>
                                     <span class="hour-message">16:13</span>
-                                </div>
-                                <div class="row-2 msg">
-                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla sapiente hic,
-                                        possimus magnam doloremque quibusdam dolor numquam vitae odio nobis provident, quod
-                                        velit libero dicta, iusto consequuntur a obcaecati?
-                                    </p>
-                                    <div class="info-message">
-                                        <i class="chevron-down fa-solid fa-chevron-down"></i>
-                                        <div class="chevron-down-hover">
-                                            <div class="hover-info">Info messaggio</div>
-                                            <div>Cancella messaggio</div>
-                                        </div>
-                                    </div>
-                                    <span class="hour-message">16:15</span>
                                 </div>
                             </div>
                         </div>

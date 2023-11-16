@@ -6,7 +6,7 @@ const app = createApp({
             contacts: [
                 {
                     name: 'Michele',
-                    avatar: '_1',
+                    avatar: 'img/avatar_1.jpg',
                     visible: true,
                     messages: [
                         {
@@ -28,7 +28,7 @@ const app = createApp({
                 },
                 {
                     name: 'Fabio',
-                    avatar: '_2',
+                    avatar: 'img/avatar_2.jpg',
                     visible: true,
                     messages: [
                         {
@@ -50,7 +50,7 @@ const app = createApp({
                 },
                 {
                     name: 'Samuele',
-                    avatar: '_3',
+                    avatar: 'img/avatar_3.jpg',
                     visible: true,
                     messages: [
                         {
@@ -72,7 +72,7 @@ const app = createApp({
                 },
                 {
                     name: 'Alessandro B.',
-                    avatar: '_4',
+                    avatar: 'img/avatar_4.jpg',
                     visible: true,
                     messages: [
                         {
@@ -89,7 +89,7 @@ const app = createApp({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: '_5',
+                    avatar: 'img/avatar_5.jpg',
                     visible: true,
                     messages: [
                         {
@@ -106,7 +106,7 @@ const app = createApp({
                 },
                 {
                     name: 'Claudia',
-                    avatar: '_6',
+                    avatar: 'img/avatar_6.jpg',
                     visible: true,
                     messages: [
                         {
@@ -128,7 +128,7 @@ const app = createApp({
                 },
                 {
                     name: 'Federico',
-                    avatar: '_7',
+                    avatar: 'img/avatar_7.jpg',
                     visible: true,
                     messages: [
                         {
@@ -145,7 +145,7 @@ const app = createApp({
                 },
                 {
                     name: 'Davide',
-                    avatar: '_8',
+                    avatar: 'img/avatar_8.jpg',
                     visible: true,
                     messages: [
                         {
@@ -166,8 +166,13 @@ const app = createApp({
                     ],
                 }
             ],
-
+            indexContact: 0,
         }
+    },
+    methods: {
+        setActiveContact(index) {
+            this.indexContact = index;
+        } 
     }
 
 }).mount("#app");

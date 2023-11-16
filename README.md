@@ -23,6 +23,7 @@
 **Milestone 5** - opzionale
 ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
 permette di cancellare il messaggio selezionato:
+
 ![alt text](image1.jpg)
 
 ● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti.
