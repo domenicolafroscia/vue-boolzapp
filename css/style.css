@@ -326,6 +326,7 @@ nav {
 .row-2 {
     background-color: white;
     align-self: flex-start;
+    margin-bottom: 10px;
 }
 
 .msg {

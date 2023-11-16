@@ -110,7 +110,7 @@
                                         <i class="chevron-down fa-solid fa-chevron-down"></i>
                                         <div class="chevron-down-hover">
                                             <div class="hover-info">Info messaggio</div>
-                                            <div>Cancella messaggio</div>
+                                            <div @click.stop="deleteMessage(msgIndex)">Cancella messaggio</div>
                                         </div>
                                     </div>
                                     <span class="hour-message">16:13</span>

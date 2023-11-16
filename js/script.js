@@ -169,7 +169,7 @@ const app = createApp({
             indexContact: 0,
             newMessage: '',
             searchText: '',
-
+            indexDelete: 0
         }
     },
     methods: {
@@ -203,6 +203,10 @@ const app = createApp({
                 };
             });
         },
+        deleteMessage(deleteMsg) {
+            this.indexDelete = deleteMsg;
+            this.contacts[this.indexContact].messages.splice(this.indexDelete, 1);
+        }
     }
 
 }).mount("#app");
