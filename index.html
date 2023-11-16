@@ -48,7 +48,7 @@
                             <div class="nav">
                                 <label for=""><i class="search-glass fa-solid fa-magnifying-glass"></i></label>
                                 <input class="search" type="text" name="Cerca o inizia una nuova chat"
-                                    placeholder="Cerca o inizia una nuova chat">
+                                    placeholder="Cerca o inizia una nuova chat" @keyup="search" v-model="searchText">
                             </div>
                         </nav>
                     </header>
@@ -58,7 +58,7 @@
                     <main>
                         <div class="container">
                             <ul class="chat">
-                                <li v-for="(contact, index) in contacts" :class="(index == indexContact) ? 'chat li' : 'chat'" @click="setActiveContact(index)">
+                                <li v-for="(contact, index) in contacts" :class="(index == indexContact) ? 'chat li' : 'chat'" @click="setActiveContact(index)" v-show="contact.visible">
                                     <div class="avatar-1">
                                         <img class="img-avatar" :src="contact.avatar" alt="Avatar chat-1">
                                         <span>

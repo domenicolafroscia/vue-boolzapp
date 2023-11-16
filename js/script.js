@@ -168,6 +168,8 @@ const app = createApp({
             ],
             indexContact: 0,
             newMessage: '',
+            searchText: '',
+
         }
     },
     methods: {
@@ -189,6 +191,16 @@ const app = createApp({
             this.contacts[this.indexContact].messages.push({
                 message: 'ok',
                 status: 'received',
+            });
+        },
+        search() {
+            let searchLetter = this.searchText.toLowerCase();
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(searchLetter)) {
+                    element.visible = true;
+                } else {
+                    element.visible = false
+                };
             });
         },
     }
