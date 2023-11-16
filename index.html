@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="wrapper">
+            <div class="container-main">
+    
+                <div class="container-left">
+                    <!-- Header -->
+                    <header class="header">
+                        <div class="my-profile">
+                            <button class="btn"> <img class="avatar" src="img/avatar_io.jpg"
+                                    alt="Avatar personale"></button>
+                            <div>
+                                <button class="btn grey-btn"><i class="fa-solid fa-circle-notch"></i></button>
+                                <button class="btn grey-btn"><i class="fa-solid fa-message"></i></button>
+                                <button class="btn grey-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                        </div>
+    
+                        <div class="notifications">
+                            <i class="bell-slash fa-solid fa-bell-slash"></i>
+                            <div class="enable-notifications">
+                                <p><strong>Ricevi notifiche di nuovi messagi</strong></p>
+                                <a href="">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+    
+                        <nav>
+                            <div class="nav">
+                                <label for=""><i class="search-glass fa-solid fa-magnifying-glass"></i></label>
+                                <input class="search" type="text" name="Cerca o inizia una nuova chat"
+                                    placeholder="Cerca o inizia una nuova chat">
+                            </div>
+                        </nav>
+                    </header>
+                    <!-- /Header -->
+    
+                    <!-- Main -->
+                    <main>
+                        <div class="container">
+                            <ul class="chat">
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_1.jpg" alt="Avatar chat-1">
+                                        <span>
+                                            <p class="name-chat">Michele</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">16:15</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_2.jpg" alt="Avatar chat-2">
+                                        <span>
+                                            <p class="name-chat">Fabio</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">16:05</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_3.jpg" alt="Avatar chat-3">
+                                        <span>
+                                            <p class="name-chat">Samuele</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">16:03</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_4.jpg" alt="Avatar chat-4">
+                                        <span>
+                                            <p class="name-chat">Alessandro B.</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">15:50</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_5.jpg" alt="Avatar chat-5">
+                                        <span>
+                                            <p class="name-chat">Alessandro L.</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">15:45</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_6.jpg" alt="Avatar chat-6">
+                                        <span>
+                                            <p class="name-chat">Claudia</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">15:40</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_7.jpg" alt="Avatar chat-7">
+                                        <span>
+                                            <p class="name-chat">Federico</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">15:22</p>
+                                    </div>
+                                </li>
+    
+                                <li>
+                                    <div class="avatar-1">
+                                        <img class="img-avatar" src="img/avatar_8.jpg" alt="Avatar chat-8">
+                                        <span>
+                                            <p class="name-chat">Davide</p>
+                                            <p class="color-gray">Lorem ipsum solor sit amet</p>
+                                        </span>
+                                    </div>
+    
+                                    <div class="avatar-2">
+                                        <p class="color-gray hour">15:15</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </main>
+                    <!-- /Main -->
+                </div>
+    
+                <div class="container-right">
+                    <!-- Header -->
+                    <header>
+                        <div class="container-1">
+                            <div class="avatar-1">
+                                <button class="btn">
+                                    <img class="img-avatar" src="img/avatar_1.jpg" alt="Avatar chat-1">
+                                </button>
+                                <span>
+                                    <button class="btn name-chat">Michele</button>
+                                    <p class="color-grey">Ultimo accesso oggi alle 16:26</p>
+                                </span>
+                            </div>
+    
+                            <div class="icons-header">
+                                <button class="btn grey-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="btn grey-btn"><i class="fa-solid fa-paperclip"></i></button>
+                                <button class="btn grey-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- /Header -->
+    
+                    <!-- Main -->
+                    <main>
+                        <div class="main">
+                            <div class="messages">
+                                <div class="row-1 msg">
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla sapiente hic,
+                                        possimus magnam doloremque quibusdam dolor numquam vitae odio nobis provident, quod
+                                        velit libero dicta, iusto consequuntur a obcaecati?
+                                    </p>
+                                    <div class="info-message">
+                                        <i class="chevron-down fa-solid fa-chevron-down"></i>
+                                        <div class="chevron-down-hover">
+                                            <div class="hover-info">Info messaggio</div>
+                                            <div>Cancella messaggio</div>
+                                        </div>
+                                    </div>
+                                    <span class="hour-message">16:13</span>
+                                </div>
+                                <div class="row-2 msg">
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla sapiente hic,
+                                        possimus magnam doloremque quibusdam dolor numquam vitae odio nobis provident, quod
+                                        velit libero dicta, iusto consequuntur a obcaecati?
+                                    </p>
+                                    <div class="info-message">
+                                        <i class="chevron-down fa-solid fa-chevron-down"></i>
+                                        <div class="chevron-down-hover">
+                                            <div class="hover-info">Info messaggio</div>
+                                            <div>Cancella messaggio</div>
+                                        </div>
+                                    </div>
+                                    <span class="hour-message">16:15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <!-- /Main -->
+    
+                    <!-- Footer -->
+                    <footer>
+                        <div class="container-1 footer">
+                            <button class="btn btn-footer emoji"><i class="fa-regular fa-face-smile"></i></button>
+                            <input class="search scrivi" type="text" name="Scrivi un messaggio"
+                                placeholder="Scrivi un messaggio">
+                            <button class="btn btn-footer microphone"><i class="fa-solid fa-microphone"></i></button>
+                        </div>
+                    </footer>
+                    <!-- /Footer -->
+                </div>
+    
+            </div>
+        </div>
+    
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
