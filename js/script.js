@@ -167,12 +167,30 @@ const app = createApp({
                 }
             ],
             indexContact: 0,
+            newMessage: '',
         }
     },
     methods: {
         setActiveContact(index) {
             this.indexContact = index;
-        } 
+        },
+        msgSend() {
+            if (this.newMessage !== '') {
+                let myMessage = {
+                    message: this.newMessage,
+                    status: 'sent',
+                };
+                this.contacts[this.indexContact].messages.push(myMessage);
+                this.newMessage = '';
+                setTimeout(this.userMessage, 1000);
+            }
+        },
+        userMessage() {
+            this.contacts[this.indexContact].messages.push({
+                message: 'ok',
+                status: 'received',
+            });
+        },
     }
 
 }).mount("#app");

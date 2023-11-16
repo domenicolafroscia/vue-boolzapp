@@ -125,7 +125,7 @@
                         <div class="container-1 footer">
                             <button class="btn btn-footer emoji"><i class="fa-regular fa-face-smile"></i></button>
                             <input class="search scrivi" type="text" name="Scrivi un messaggio"
-                                placeholder="Scrivi un messaggio">
+                                placeholder="Scrivi un messaggio" @keyup.enter="msgSend" v-model.trim="newMessage">
                             <button class="btn btn-footer microphone"><i class="fa-solid fa-microphone"></i></button>
                         </div>
                     </footer>
