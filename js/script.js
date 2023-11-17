@@ -1,5 +1,7 @@
 const { createApp } = Vue;
 
+const dt = luxon.DateTime;
+
 const app = createApp({
     data() {
         return {
@@ -186,6 +188,10 @@ const app = createApp({
                 this.newMessage = '';
                 setTimeout(this.userMessage, 1000);
             }
+        },
+        dateToHourMin(fullDate) {
+            const luxonDate = dt.fromFormat(fullDate, "dd/MM/yyyy HH:mm:ss");
+            return luxonDate.toFormat("HH:mm")
         },
         userMessage() {
             this.contacts[this.indexContact].messages.push({
