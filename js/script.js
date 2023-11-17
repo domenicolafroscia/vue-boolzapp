@@ -2,6 +2,8 @@ const { createApp } = Vue;
 
 const dt = luxon.DateTime;
 
+const realDate = dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss');
+
 const app = createApp({
     data() {
         return {
@@ -171,7 +173,8 @@ const app = createApp({
             indexContact: 0,
             newMessage: '',
             searchText: '',
-            indexDelete: 0
+            indexDelete: 0,
+            realDate,
         }
     },
     methods: {
@@ -181,6 +184,7 @@ const app = createApp({
         msgSend() {
             if (this.newMessage !== '') {
                 let myMessage = {
+                    date: this.realDate,
                     message: this.newMessage,
                     status: 'sent',
                 };
@@ -195,6 +199,7 @@ const app = createApp({
         },
         userMessage() {
             this.contacts[this.indexContact].messages.push({
+                date: this.realDate,
                 message: 'ok',
                 status: 'received',
             });

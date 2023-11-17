@@ -68,7 +68,7 @@
                                     </div>
     
                                     <div class="avatar-2">
-                                        <p class="color-gray hour">16:15</p>
+                                        <p class="color-gray hour">{{ dateToHourMin(contact.messages[contact.messages.length - 1].date) }}</p>
                                     </div>
                                 </li>
                             </ul>
@@ -87,7 +87,7 @@
                                 </button>
                                 <span>
                                     <button class="btn name-chat">{{ contacts[indexContact].name }}</button>
-                                    <p class="color-grey">Ultimo accesso oggi alle {{  }}</p>
+                                    <p class="color-grey">Ultimo accesso oggi alle {{ dateToHourMin(contacts[indexContact].messages[contacts[indexContact].messages.length - 1].date) }}</p>
                                 </span>
                             </div>
     
